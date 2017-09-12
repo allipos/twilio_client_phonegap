@@ -578,6 +578,7 @@ public class TCPlugin extends CordovaPlugin implements DeviceListener,
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
+		Twilio.shutdown();
 		//lifecycle events
 		LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(cordova
 				.getActivity());
